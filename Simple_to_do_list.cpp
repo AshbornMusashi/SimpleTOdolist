@@ -7,19 +7,19 @@ int main(){
 	string input2;
 	char proceed;
 	vector<string>tasks = {};
+	
 	do{
-
 	//displaying options
 	cout<<"To-do-List"<<endl;
 	cout<<"1.Add Task"<<endl;
 	cout<<"2.Show Tasks"<<endl;
 	cout<<"3.Mark Task as done"<<endl;
-    cout<<"4.Exit"<<endl;
+        cout<<"4.Exit"<<endl;
 
 	//getting user input
-    cout<<"Enter number: "<<endl;
-    cin>>choice;
-	cin.ignore();
+       cout<<"Enter number: "<<endl;
+       cin>>choice;
+       cin.ignore();
 
 	//displaying output depending on user option
 	switch(choice){
@@ -38,7 +38,7 @@ int main(){
 		cout << "Continue?[y/n]--";
 		cin >> proceed;
 		break;
-		case 3:
+	case 3:
 		for (int x = 0; x < tasks.size(); x++) {
 			cout << x + 1 << ". " << tasks[x] << endl;
 		}
@@ -55,17 +55,17 @@ int main(){
 	
 		cout << "Continue?[y/n]--";
 		cin >> proceed;
-     	break;
+     	        break;
 		
-		case 4:
-		  cout << "Thank you for trying it out!";
-		  return 1;
+	case 4:
+		cout << "Thank you for trying it out!";
+		return 1;
 	    
-		  default:
+        default:
 		  cout << "Invalid input";
         }
 		system("cls");
     }while(proceed == 'y');
 
-	return 0;
+return 0;
 }
